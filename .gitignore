@@ -205,3 +205,49 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# --- Project-specific ignores ---
+
+# Local environment and secrets
+.env
+config/.env
+
+# Data files (NYC taxi parquet/csv downloads)
+data/
+*.parquet
+*.csv
+
+# Backups from mysqldump
+backups/
+*.sql
+
+# Logs
+*.log
+logs/
+etl.log
+backup.log
+
+# Docker volumes (if any local binds are used)
+mysql_data/
+# --- Project-specific ignores ---
+
+# Local environment and secrets
+.env
+config/.env
+
+# Data files (NYC taxi parquet/csv downloads)
+data/
+*.parquet
+*.csv
+
+# Backups from mysqldump
+backups/
+*.sql
+
+# Logs
+*.log
+logs/
+etl.log
+backup.log
+
+# Docker volumes (if any local binds are used)
+mysql_data/
