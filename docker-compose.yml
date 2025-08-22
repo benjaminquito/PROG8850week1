@@ -1,0 +1,21 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: nyc-mysql
+    command: ["--local-infile=1"]
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: nyc_taxi
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+  adminer:
+    image: adminer
+    container_name: nyc-adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+volumes:
+  mysql_data:
